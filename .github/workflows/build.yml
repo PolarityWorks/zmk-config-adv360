@@ -54,5 +54,5 @@ jobs:
         with:
           name: firmware
           path: |
-          left.uf2
-          right.uf2
+            left.uf2
+            right.uf2
