@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: refil
-      revision: bt75
+      revision: adv360-beta
       import: app/west.yml
   self:
     path: config
