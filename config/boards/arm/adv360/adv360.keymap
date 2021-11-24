@@ -44,11 +44,11 @@
     };
     mod {
       bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                   &trans        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-        &none &none        &none        &none        &none        &none        &bootloader                                                                             &bootloader   &none        &none        &none        &none        &none        &none
-        &none &none        &none        &none        &none        &none        &reset                      &bt BT_CLR &none &none &none &bt BT_CLR &none                &reset         &none        &none        &none        &none        &none        &none
-        &none &none        &none        &none        &none        &none                   &none           &none      &none &none &none &none      &none      &none                   &none        &none        &none        &none        &none        &none
-        &none &none        &none        &bl BL_INC   &bl BL_DEC                           &rgb_ug RGB_TOG &bl BL_TOG &none             &none      &bl BL_TOG &rgb_ug RGB_TOG                      &bl BL_INC   &bl BL_DEC   &none        &none        &none
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                                  &trans        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
+        &none &none        &none        &none        &none        &none        &bootloader                                                                                            &bootloader   &none        &none        &none        &none        &none        &none
+        &none &none        &none        &none        &none        &none        &reset                &bt BT_CLR &bt BT_CLR &none &none &bt BT_CLR &bt BT_CLR                          &reset         &none        &none        &none        &none        &none        &none
+        &none &none        &none        &none        &none        &none                   &none           &none      &rgb_ug RGB_EFF &none &none &rgb_ug RGB_EFF  &none      &none                   &none        &none        &none        &none        &none        &none
+        &none &none        &none        &bl BL_INC   &bl BL_DEC                           &rgb_ug RGB_TOG &bl BL_TOG &rgb_ug RGB_EFR             &rgb_ug RGB_EFR  &bl BL_TOG &rgb_ug RGB_TOG                      &bl BL_INC   &bl BL_DEC   &none        &none        &none
       >;
     };
   };
