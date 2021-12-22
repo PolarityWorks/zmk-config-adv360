@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2021 Darryl deHaan
+# Copyright (c) 2021 Polarity Works
 # SPDX-License-Identifier: MIT
 #
 
