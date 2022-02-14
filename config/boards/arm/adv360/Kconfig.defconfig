@@ -6,14 +6,14 @@
 if BOARD_ADV360_LEFT
 
 	config ZMK_KEYBOARD_NAME
-	default "Adv360"
+	default "Adv360 Pro"
 
 endif # BOARD_ADV360_LEFT
 
 if BOARD_ADV360_RIGHT
 
 	config ZMK_KEYBOARD_NAME
-	default "Adv360 rt"
+	default "Adv360 Pro rt"
 
 endif # BOARD_ADV360_RIGHT
 
