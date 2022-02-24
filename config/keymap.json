@@ -4,8 +4,8 @@
   "layout": "LAYOUT",
   "layer_names": [
     "base",
-    "fn",
     "keypad",
+    "fn",
     "mod"
   ],
   "layers": [
