@@ -42,7 +42,7 @@
   keymap {
     compatible = "zmk,keymap";
 
-    default_layer {
+    default_layer_noLED {
       bindings = <
         &kp EQUAL &la LG(LS(LA(KP_N7))) N1    &la LG(LS(LA(KP_N2))) N2   &la LG(LS(LA(KP_N1))) N3   &la LG(LS(LA(KP_N4))) N4   &la LG(LS(LA(KP_N3))) N5  &tog 1      &mo 3   &la LG(LS(LA(KP_N9))) N6 &la LG(LS(LA(KP_N0))) N7 &la LG(LS(LA(KP_N6))) N8  &la LG(LS(LA(KP_N5))) N9   &la LG(LS(LA(KP_N8))) N0   &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                       &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
@@ -51,7 +51,7 @@
         &mo 2     &kp GRAVE &kp ESC &kp LEFT &kp RIGHT               &kp BKSP  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE               &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
         >;
     };
-    1_keypad_layer_white {
+    1_keypad_white {
       bindings = <
         &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                        &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
@@ -60,7 +60,7 @@
         &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT               &kp BKSP &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp KP_N0               &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT         &mo 2
       >;
     };
-    2_Fkey_layer_blue {
+    2_fn_blue {
       bindings = <
         &kp F1  &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                                          &mo 3 &kp F7  &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
         &trans  &trans &trans &trans &trans &trans  &none                                                          &none &trans  &trans &trans &trans  &trans  &trans
@@ -69,7 +69,7 @@
         &trans  &trans &trans &trans &trans               &trans &trans &trans             &trans &trans &trans                  &trans &trans &trans  &trans  &trans
       >;
     };
-    3_mod_layer_green {
+    3_mod_green {
       bindings = <
         &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                                  &trans        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
         &none &none        &none        &none        &none        &none        &bootloader                                                                                            &bootloader   &none        &none        &none        &none        &none        &none
@@ -78,13 +78,14 @@
         &none &none        &none        &bl BL_INC   &bl BL_DEC                           &rgb_ug RGB_TOG &bl BL_TOG &none                 &none      &bl BL_TOG &rgb_ug RGB_TOG                      &bl BL_INC   &bl BL_DEC   &none        &none        &none
       >;
     };
-    4_test_layer_red {
+    4_test_red {
       bindings = <
-        &kp F1  &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                                          &mo 3 &kp F7  &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans  &trans &trans &trans &trans &trans  &none                                                          &none &trans  &trans &trans &trans  &trans  &trans
-        &trans  &trans &trans &trans &trans &trans  &none        &trans &trans &none &none &trans &trans           &none &trans  &trans &trans &trans  &trans  &trans
-        &trans  &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none            &trans &trans &trans &trans  &trans  &trans
-        &trans  &trans &trans &trans &trans               &trans &trans &trans             &trans &trans &trans                  &trans &trans &trans  &trans  &trans
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                                  &trans        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
+        &none &none        &none        &none        &none        &none        &bootloader                                                                                            &bootloader   &none        &none        &none        &none        &none        &none
+        &none &none        &none        &none        &none        &none        &rgb_ug RGB_MEFS_CMD 5    &bt BT_CLR &bt BT_CLR &none &none &bt BT_CLR &bt BT_CLR         &rgb_ug RGB_MEFS_CMD 5    &none        &none        &none        &none        &none        &none
+        &none &none        &none        &none        &none        &none                   &none           &none      &none     &none &none &none      &none      &none                   &none        &none        &none        &none        &none        &none
+        &none &none        &none        &bl BL_INC   &bl BL_DEC                           &rgb_ug RGB_TOG &bl BL_TOG &none                 &none      &bl BL_TOG &rgb_ug RGB_TOG                      &bl BL_INC   &bl BL_DEC   &none        &none        &none
       >;
+    };
   };
 };
