@@ -38,6 +38,9 @@
             bindings = <&kp>, <&kp>;
         };
     };
+    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+    	};
+    };
 
   keymap {
     compatible = "zmk,keymap";
