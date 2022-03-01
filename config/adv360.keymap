@@ -82,10 +82,10 @@
     4_test_red {
       bindings = <
         &trans  &trans &trans &trans &trans &trans  &none                                                          &none  &trans  &trans      &trans       &trans  &trans  &trans
-        &trans  &trans &trans &trans &trans &trans  &none                                                          &none  &trans  &trans      &C_AL_IM       &trans  &C_AC_PRINT  &trans
-        &trans  &trans &trans &C_AL_DOCUMENTS &trans &trans  &none        &trans &trans &none &none &trans &trans  &trans &trans  &trans      &trans       &C_AL_LOGOFF  &trans  &trans
-        &trans  &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none            &trans  &C_MENU_PICK      &trans       &trans  &trans  &trans
-        &trans  &trans &trans &C_AL_PREV_TASK &C_AL_NEXT_TASK               &trans &trans &trans             &trans &trans &trans                   &C_AC_ZOOM_IN      &C_AC_ZOOM_OUT       &trans  &trans  &trans
+        &trans  &trans &trans &trans &trans &trans  &none                                                          &none  &trans  &trans      &kp C_AL_IM       &trans  &kp C_AC_PRINT  &trans
+        &trans  &trans &trans &kp C_AL_DOCUMENTS &trans &trans  &none        &trans &trans &none &none &trans &trans  &trans &trans  &trans      &trans       &kp C_AL_LOGOFF  &trans  &trans
+        &trans  &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none            &trans  &kp C_MENU_PICK      &trans       &trans  &trans  &trans
+        &trans  &trans &trans &kp C_AL_PREV_TASK &kp C_AL_NEXT_TASK               &trans &trans &trans             &trans &trans &trans                   &kp C_AC_ZOOM_IN      &kp C_AC_ZOOM_OUT       &trans  &trans  &trans
       >;
     };
   };
