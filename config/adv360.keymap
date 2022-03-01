@@ -84,7 +84,7 @@
         &trans  &trans &trans &trans &trans &trans  &none                                                          &none  &trans  &trans      &trans       &trans  &trans  &trans
         &trans  &trans &trans &trans &trans &trans  &none                                                          &none  &trans  &trans      &kp C_AL_IM       &trans  &kp C_AC_PRINT  &trans
         &trans  &trans &trans &trans &trans &trans  &none        &trans &trans &none &none &trans &trans  &trans &trans  &trans      &trans       &kp C_AL_LOGOFF  &trans  &trans
-        &trans  &trans &trans &trans &LS(KP_V) &none        &none  &none  &trans &none &none &trans &none  &none            &trans  &kp C_MENU_PICK      &trans       &trans  &trans  &trans
+        &trans  &trans &trans &trans LS(KP_V) &none        &none  &none  &trans &none &none &trans &none  &none            &trans  &kp C_MENU_PICK      &trans       &trans  &trans  &trans
         &trans  &trans &trans &kp C_AL_PREV_TASK &kp C_AL_NEXT_TASK               &trans &trans &trans             &trans &trans &trans                   &kp C_AC_ZOOM_IN      &kp C_AC_ZOOM_OUT       &trans  &trans  &trans
       >;
     };
