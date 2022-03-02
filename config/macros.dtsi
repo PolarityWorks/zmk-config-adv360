@@ -4,11 +4,11 @@
     #binding-cells = <0>;
     bindings = <&kp S>, <&kp N0>, <&kp L>, <&kp O>, <&kp LS(V)>, <&kp E>, <&kp N>, <&kp T>;
   };
-  macro_dquotes: macro_dquotes {
+  macro_dailyapps: macro_dailyapps {
     compatible = "zmk,behavior-macro";
-    label = "macro_dquotes";
+    label = "macro_dailyapps";
     #binding-cells = <0>;
-    bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
+    bindings = <&kp LG(LS(LA(KP_N7)))>, <&kp LG(LS(LA(KP_N2)))>, <&kp LG(LS(LA(KP_N1)))>, <&kp LG(LS(LA(KP_N4)))>, <&kp LG(LS(LA(KP_N3)))>, <&kp LG(LS(LA(KP_N9)))>;
   };
   macro_braces: macro_braces {
     compatible = "zmk,behavior-macro";
