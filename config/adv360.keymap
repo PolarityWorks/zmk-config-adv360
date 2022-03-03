@@ -1,77 +1,92 @@
-
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
-
-/* THIS FILE WAS GENERATED!
- *
- * This file was generated automatically. You may or may not want to
- * edit it directly.
- */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/backlight.h>
 
 / {
-    keymap {
-        compatible = "zmk,keymap";
+    behaviors {
+      #include "macros.dtsi"
 
-
-        default_layer {
-            bindings = <
- &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4    &kp N5             &tog 2      &mo 3     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0  &kp MINUS
-   &kp TAB      &kp Q     &kp W     &kp E      &kp R     &kp T              &none      &none      &kp Y      &kp U      &kp I      &kp O      &kp P   &kp BSLH
-   &kp ESC      &kp A     &kp S     &kp D      &kp F     &kp G              &none  &kp LCTRL   &kp LALT      &none      &none   &kp LGUI  &kp RCTRL     &tog 4     &kp H   &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
- &kp LSHFT      &kp Z     &kp X     &kp C      &kp V     &kp B              &none      &none   &kp HOME      &none      &none  &kp PG_UP      &none      &none     &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-     &mo 1  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT  &kp BSPC            &kp DEL    &kp END  &kp PG_DN  &kp ENTER  &kp SPACE     &kp UP   &kp DOWN   &kp LBKT  &kp RBKT   &mo 1
-            >;
-        };
-
-        layer_fn {
-            bindings = <
-    &kp F1     &kp F2    &kp F3    &kp F4     &kp F5    &kp F6             &tog 2      &mo 3     &kp F7     &kp F8     &kp F9    &kp F10    &kp F11   &kp F12
-   &kp TAB      &kp Q     &kp W     &kp E      &kp R     &kp T              &none      &none      &kp Y      &kp U      &kp I      &kp O      &kp P  &kp BSLH
-   &kp ESC      &kp A     &kp S     &kp D      &kp F     &kp G              &none  &kp LCTRL   &kp LALT      &none      &none   &kp LGUI  &kp RCTRL     &none     &kp H   &kp J      &kp K    &kp L  &kp SEMI    &kp SQT
- &kp LSHFT      &kp Z     &kp X     &kp C      &kp V     &kp B              &none      &none   &kp HOME      &none      &none  &kp PG_UP      &none     &none     &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-    &trans  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT  &kp BSPC            &kp DEL    &kp END  &kp PG_DN  &kp ENTER  &kp SPACE     &kp UP   &kp DOWN  &kp LBKT  &kp RBKT  &trans
-            >;
-        };
-
-        layer_keypad {
-            bindings = <
- &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4    &kp N5             &trans      &mo 3     &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp MINUS
-   &kp TAB      &kp Q     &kp W     &kp E      &kp R     &kp T              &none      &none      &kp Y   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS    &kp BSLH
-   &kp ESC      &kp A     &kp S     &kp D      &kp F     &kp G              &none  &kp LCTRL   &kp LALT       &none         &none       &kp LGUI        &kp RCTRL       &none     &kp H  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS    &kp SQT
- &kp LSHFT      &kp Z     &kp X     &kp C      &kp V     &kp B              &none      &none   &kp HOME       &none         &none      &kp PG_UP            &none       &none     &kp N  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_ENTER  &kp RSHFT
-     &mo 1  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT  &kp BSPC            &kp DEL    &kp END  &kp PG_DN   &kp ENTER     &kp KP_N0         &kp UP         &kp DOWN  &kp KP_DOT  &kp RBKT      &mo 1
-            >;
-        };
-
-        layer_mod {
-            bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4                  &none       &trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &none
-  &none         &none         &none         &none         &none            &none            &bootloader  &bootloader         &none         &none            &none         &none         &none   &none
-  &none         &none         &none         &none         &none            &none                  &none   &bt BT_CLR         &none         &none            &none    &bt BT_CLR    &bt BT_CLR   &none   &none   &none   &none   &none   &none   &none
-  &none         &none         &none         &none         &none            &none                  &none        &none         &none         &none            &none         &none         &none   &none   &none   &none   &none   &none   &none   &none
-  &none         &none         &none    &bl BL_INC    &bl BL_DEC  &rgb_ug RGB_TOG             &bl BL_TOG        &none         &none    &bl BL_TOG  &rgb_ug RGB_TOG    &bl BL_INC    &bl BL_DEC   &none   &none   &none
-            >;
-        };
-
-        layer_LAYER_4 {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp NUMBER_1  &kp C_MUTE  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans        &trans      &trans           &trans             &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans        &trans      &trans           &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans        &trans      &trans           &trans             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans        &trans      &trans           &trans             &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
+      hm: homerow_mods {
+          compatible = "zmk,behavior-hold-tap";
+          label = "HOMEROW_MODS";
+          #binding-cells = <2>;
+          tapping-term-ms = <200>;
+          quick_tap_ms = <175>;
+          flavor = "tap-preferred";
+          bindings = <&kp>, <&kp>;
+      };
     };
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping_term_ms = <100>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+    behaviors {
+        la: launch_apps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAUNCH_APPS";
+            #binding-cells = <2>;
+            tapping_term_ms = <400>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+  keymap {
+    compatible = "zmk,keymap";
+
+    default_layer_noLED {
+      bindings = <
+        &kp EQUAL &la LG(LS(LA(KP_N7))) N1    &la LG(LS(LA(KP_N2))) N2   &la LG(LS(LA(KP_N1))) N3   &la LG(LS(LA(KP_N4))) N4   &la LG(LS(LA(KP_N3))) N5  &tog 1      &mo 3   &la LG(LS(LA(KP_N9))) N6 &la LG(LS(LA(KP_N0))) N7 &la LG(LS(LA(KP_N6))) N8  &la LG(LS(LA(KP_N5))) N9   &la LG(LS(LA(KP_N8))) N0   &kp MINUS
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                       &none  &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+        &kp CAPS  &kp A     &kp S    &kp D    &kp F      &kp G  &none    &hm LGUI SPACE &kp LALT &none &none &kp LGUI  &kp RCTRL            &tog 4 &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B        &none     &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &mo 2     &kp GRAVE &kp ESC &kp LEFT &kp RIGHT               &kp BKSP  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE               &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+        >;
+    };
+    1_keypad_white {
+      bindings = <
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                        &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
+        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none          &kp LCTRL &kp LALT &none &none &kp LGUI  &kp RCTRL            &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B        &none    &none     &kp HOME &none &none &kp PG_UP &none     &none            &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp RSHFT
+        &mo 2     &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT               &kp BKSP &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp KP_N0               &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT         &mo 2
+      >;
+    };
+    2_fn_blue {
+      bindings = <
+        &kp F1  &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1                                                          &mo 3 &kp F7  &kp F8       &kp F9       &kp F10 &kp F11 &kp F12
+        &trans  &trans &trans &trans &trans &trans  &none                                                          &none &trans  &trans       &trans       &trans  &trans  &trans
+        &trans  &trans &trans &trans &trans &trans  &none        &trans &trans &none &none &trans &trans           &none &trans  &trans       &trans       &trans  &trans  &trans
+        &trans  &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none            &trans &trans       &trans       &trans  &trans  &trans
+        &trans  &trans &trans &trans &trans               &trans &trans &trans             &trans &trans &kp C_MUTE              &kp C_VOL_UP &kp C_VOL_DN &trans  &trans  &trans
+      >;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+    };
+    3_mod_green {
+      bindings = <
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                                  &trans        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
+        &none &none        &none        &none        &none        &none        &bootloader                                                                                            &bootloader   &none        &none        &none        &none        &none        &none
+        &none &none        &none        &none        &none        &none        &rgb_ug RGB_MEFS_CMD 5    &bt BT_CLR &bt BT_CLR &none &none &bt BT_CLR &bt BT_CLR         &rgb_ug RGB_MEFS_CMD 5    &none        &none        &none        &none        &none        &none
+        &none &none        &none        &none        &none        &none                   &none           &none      &none     &none &none &none      &none      &none                   &none        &none        &none        &none        &none        &none
+        &none &none        &none        &bl BL_INC   &bl BL_DEC                           &rgb_ug RGB_TOG &bl BL_TOG &none                 &none      &bl BL_TOG &rgb_ug RGB_TOG                      &bl BL_INC   &bl BL_DEC   &none        &none        &none
+      >;
+    };
+    4_test_red {
+      bindings = <
+        &trans  &trans &trans &trans &trans &trans  &none                                                          &none  &trans  &trans      &trans       &trans  &trans  &trans
+        &trans  &trans &trans &trans &trans &trans  &none                                                          &none  &trans  &trans      &trans       &trans  &trans  &trans
+        &trans  &trans &trans &trans &trans &trans  &none        &trans &trans &none &none &trans &trans           &trans &trans  &trans      &trans       &macro_dailyapps  &trans  &trans
+        &trans  &trans &trans &trans &kp LS(V) &trans        &none  &none  &trans &none &none &trans &none  &none            &trans  &kp C_MENU_PICK      &trans       &trans  &trans  &trans
+        &trans  &trans &trans &kp C_AL_PREV_TASK &kp C_AL_NEXT_TASK               &trans &trans &trans             &trans &trans &trans                   &kp C_AC_ZOOM_IN      &kp C_AC_ZOOM_OUT       &trans  &trans  &trans
+      >;
+    };
+  };
 };
