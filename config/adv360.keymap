@@ -68,6 +68,7 @@
         &trans  &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none            &trans &trans       &trans       &trans  &trans  &trans
         &trans  &trans &trans &trans &trans               &trans &trans &trans             &trans &trans &kp C_MUTE              &kp C_VOL_UP &kp C_VOL_DN &trans  &trans  &trans
       >;
+      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
     3_mod_green {
       bindings = <
