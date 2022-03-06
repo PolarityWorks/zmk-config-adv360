@@ -1,8 +1,8 @@
-  macro_pw: macro_pw {
+  macro_pw: macro_secret {
     compatible = "zmk,behavior-macro";
-    label = "macro_pw";
+    label = "macro_secret";
     #binding-cells = <0>;
-    bindings = <&kp S>, <&kp N0>, <&kp L>, <&kp O>, <&kp LS(V)>, <&kp E>, <&kp N>, <&kp T>;
+    bindings = <&kp S>, <&kp N3>, <&kp C>, <&kp LS(R)>, <&kp 3>, <&kp T>;
   };
   macro_dailyapps: macro_dailyapps {
     compatible = "zmk,behavior-macro";
