@@ -18,6 +18,7 @@
 		zephyr,code-partition = &code_partition;
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
+		zephyr,console = &cdc_acm_uart;
 		zmk,kscan = &kscan0;
 		zmk,underglow = &led_strip;
 		zmk,matrix_transform = &default_transform;
@@ -139,25 +140,10 @@
 	};
 };
 
-&spi1 {
-	compatible = "nordic,nrf-spim";
-	status = "okay";
-	mosi-pin = <20>;
-	// Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
-	sck-pin = <27>;
-	miso-pin = <8>;
-
-	led_strip: ws2812@0 {
-		compatible = "worldsemi,ws2812-spi";
-		label = "WS2812";
-
-		/* SPI */
-		reg = <0>;
-		spi-max-frequency = <4000000>;
-
-		/* WS2812 */
-		chain-length = <12>; /* number of LEDs */
-		spi-one-frame = <0x70>;
-		spi-zero-frame = <0x40>;
-	};
+&usbd {
+  status = "okay";
+  cdc_acm_uart: cdc_acm_uart {
+    compatible = "zephyr,cdc-acm-uart";
+    label = "CDC_ACM_0";
+  };
 };
