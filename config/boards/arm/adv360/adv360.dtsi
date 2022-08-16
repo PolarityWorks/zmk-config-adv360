@@ -145,6 +145,7 @@
     compatible = "zephyr,cdc-acm-uart";
     label = "CDC_ACM_0";
   };
+};
 &spi1 {
 	compatible = "nordic,nrf-spim";
 	status = "okay";
