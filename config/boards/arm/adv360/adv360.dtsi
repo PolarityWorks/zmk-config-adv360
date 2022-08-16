@@ -57,13 +57,7 @@
 		};
 	};
 
-	vbatt {
-		compatible = "zmk,battery-voltage-divider";
-		label = "VBATT";
-		io-channels = <&adc 2>;
-		output-ohms = <100000>;
-		full-ohms = <(100000 + 100000)>;
-	};
+
 
 	backlight: pwmleds {
 			compatible = "pwm-leds";
@@ -184,4 +178,12 @@
                    LED_COLOR_ID_RED
                    LED_COLOR_ID_BLUE>;
 	};
+};
+
+&vbatt {
+	compatible = "zmk,battery-voltage-divider";
+	label = "VBATT";
+	io-channels = <&adc 2>;
+	output-ohms = <100000>;
+	full-ohms = <(100000 + 100000)>;
 };
