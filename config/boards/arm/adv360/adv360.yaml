@@ -16,3 +16,4 @@ supported:
   - can
   - kscan
   - ble
+  - pwm
